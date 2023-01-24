@@ -1,0 +1,50 @@
+@use "../abtracts/" as *;
+
+button {
+  outline: 0;
+  border: 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn {
+  text-transform: uppercase;
+  padding: 10px 40px;
+  font-size: x-Large;
+  background-color: $main-color;
+  position: relative;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  color: $second-bg;
+  &:hover {
+    background-color: $main-color-hover;
+  }
+  &.sm {
+    font-size: medium;
+    font-weight: 500;
+    padding: 10px 20px;
+  }
+  &.snow {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 100%;
+      width: 100px;
+    }
+    &::before {
+      content: "";
+      top: -40%;
+      left: 0;
+      background-image: url(../../../assets/snow-1.png);
+    }
+    &::after {
+      content: "";
+      top: -50%;
+      right: 0;
+      background-image: url(../../../assets/snow-1.png);
+    }
+  }
+}

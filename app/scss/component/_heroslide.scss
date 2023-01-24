@@ -1,0 +1,31 @@
+@use "../abtracts/" as *;
+
+.hero-slide {
+  .swiper-slide {
+    @include flex(center, center);
+    .content {
+      @include flex(center, flex-start);
+      width: 100%;
+      max-width: 1360px;
+      height: 600px;
+      background-position: right;
+      background-repeat: no-repeat;
+      border-style: cover;
+      border-radius: $border-radius;
+    }
+    @include mobile {
+      border-radius: 0;
+    }
+    .text {
+      padding-left: 70px;
+      line-height: 1;
+      @include mobile {
+        padding-left: 10px;
+      }
+      .discount {
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
